@@ -4,7 +4,7 @@ const path = require("path");
 
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
-    fs.readFile(path.join(__dirname, "./Pages/home.html"), (err, data) => {
+    fs.readFile(path.join(__dirname, "./Pages/index.html"), (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end("500 internal server error");
